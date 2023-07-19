@@ -1,11 +1,17 @@
 import Image from "next/image";
+import {
+  BsFillBootstrapFill,
+  BsTypeBold,
+  BsFillMoonStarsFill,
+} from "react-icons/bs";
 
 export default function Home() {
   return (
-    <main>
-      <section className="bg-blue-900  h-screen flex items-center justify-center">
-        <h1 className="">Hello World</h1>
-      </section>
+    <main className="container mx-auto min-h-screen">
+      <nav className="mt-8 flex items-center justify-between lg:mt-12">
+        <BsFillBootstrapFill className="cursor-pointer text-3xl text-white" />
+        <BsFillMoonStarsFill className="cursor-pointer text-2xl text-white" />
+      </nav>
     </main>
   );
 }
