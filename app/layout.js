@@ -1,6 +1,8 @@
 import "./globals.css";
 import { League_Spartan } from "next/font/google";
 
+import Providers from "@/components/Providers";
+
 const leagueSpartan = League_Spartan({ subsets: ["latin"] });
 
 export const metadata = {
@@ -11,8 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-blue-950 ${leagueSpartan.className}`}>
-        {children}
+      <body className={leagueSpartan.className}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
