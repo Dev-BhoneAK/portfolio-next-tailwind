@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="container mx-auto min-h-screen"></main>
+      <main className="min-h-screen"></main>
       <footer></footer>
     </>
   );
