@@ -24,15 +24,19 @@ export default function Header() {
       <nav className="mt-8 flex items-center justify-between lg:mt-12">
         <BsFillBootstrapFill className="cursor-pointer text-3xl" />
         {theme === "dark" ? (
-          <BsFillMoonStarsFill
-            className="cursor-pointer text-2xl"
-            onClick={() => setTheme("light")}
-          />
+          <div className="flex items-center justify-center bg-white rounded-full p-2">
+            <BsFillMoonStarsFill
+              className="cursor-pointer  text-lg text-blue-950"
+              onClick={() => setTheme("light")}
+            />
+          </div>
         ) : (
-          <BsSunFill
-            className="cursor-pointer text-2xl text-black"
-            onClick={() => setTheme("dark")}
-          />
+          <div className="flex items-center justify-center bg-blue-950 rounded-full p-2">
+            <BsSunFill
+              className="cursor-pointer text-lg text-sky-400"
+              onClick={() => setTheme("dark")}
+            />
+          </div>
         )}
       </nav>
     </header>
