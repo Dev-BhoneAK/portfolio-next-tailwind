@@ -13,7 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`container mx-auto ${leagueSpartan.className}`}>
+      <body
+        className={`container mx-auto bg-white text-slate-800 dark:bg-blue-950 dark:text-sky-400 ${leagueSpartan.className}`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
