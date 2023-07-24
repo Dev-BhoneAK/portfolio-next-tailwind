@@ -12,8 +12,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={leagueSpartan.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`container mx-auto ${leagueSpartan.className}`}>
         <Providers>{children}</Providers>
       </body>
     </html>
