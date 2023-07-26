@@ -25,7 +25,7 @@ export default function TransitionBackground() {
             key={theme}
             animate={{
               clipPath: ["circle(0% at 100% 0%)", "circle(150% at 100% 0%)"],
-              backgroundColor: "white",
+              backgroundColor: "red",
             }}
             className=" absolute top-0 right-0 z-10 w-full h-full"
             transition={{
@@ -38,7 +38,7 @@ export default function TransitionBackground() {
             key={theme}
             animate={{
               clipPath: ["circle(0% at 100% 0%)", "circle(150% at 100% 0%)"],
-              backgroundColor: "black",
+              backgroundColor: "blue",
             }}
             className=" absolute top-0 right-0 z-10 w-full h-full"
             transition={{
