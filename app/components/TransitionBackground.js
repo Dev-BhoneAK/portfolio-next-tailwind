@@ -21,11 +21,11 @@ export default function TransitionBackground() {
       <AnimatePresence initial={false}>
         {theme === "dark" ? (
           <motion.div
-            // initial={{ backgroundColor: "white" }}
+            initial={{ backgroundColor: "white" }}
             key={theme}
             animate={{
               clipPath: ["circle(0% at 100% 0%)", "circle(150% at 100% 0%)"],
-              backgroundColor: "red",
+              backgroundColor: "black",
             }}
             className=" absolute top-0 right-0 z-10 w-full h-full"
             transition={{
@@ -34,11 +34,11 @@ export default function TransitionBackground() {
           />
         ) : (
           <motion.div
-            // initial={{ backgroundColor: "black" }}
+            initial={{ backgroundColor: "black" }}
             key={theme}
             animate={{
               clipPath: ["circle(0% at 100% 0%)", "circle(150% at 100% 0%)"],
-              backgroundColor: "blue",
+              backgroundColor: "white",
             }}
             className=" absolute top-0 right-0 z-10 w-full h-full"
             transition={{
