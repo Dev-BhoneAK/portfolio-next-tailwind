@@ -22,25 +22,31 @@ export default function TransitionBackground() {
         {theme === "dark" ? (
           <motion.div
             initial={{ backgroundColor: "white" }}
+            // initial={{ className: `bg-white` }}
             key={theme}
             animate={{
               clipPath: ["circle(0% at 100% 0%)", "circle(150% at 100% 0%)"],
+              //   className: `bg-blue-950`,
               backgroundColor: "black",
+              color: "white",
             }}
-            className=" absolute top-0 right-0 z-10 w-full h-full"
+            className="absolute top-0 right-0 z-10 w-full h-full"
             transition={{
               duration: 4,
             }}
           />
         ) : (
           <motion.div
+            // initial={{ className: `bg-blue-950` }}
             initial={{ backgroundColor: "black" }}
             key={theme}
             animate={{
               clipPath: ["circle(0% at 100% 0%)", "circle(150% at 100% 0%)"],
+              //   className: `bg-white`,
               backgroundColor: "white",
+              color: "white",
             }}
-            className=" absolute top-0 right-0 z-10 w-full h-full"
+            className="absolute top-0 right-0 z-10 w-full h-full"
             transition={{
               duration: 4,
             }}

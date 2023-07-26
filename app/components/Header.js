@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 
-export default function Header() {
+export default function Header({ setLoading }) {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -26,7 +26,10 @@ export default function Header() {
     <header className="relative z-30">
       <nav className="mt-8 flex items-center justify-between lg:mt-12">
         <BsFillBootstrapFill className="cursor-pointer text-3xl" />
-        <div className="flex items-center justify-center bg-blue-950  rounded-full p-2 dark:bg-white">
+        <div
+          className="flex items-center justify-center bg-blue-950  rounded-full p-2"
+          onClick={() => setLoading(true)}
+        >
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={theme}
