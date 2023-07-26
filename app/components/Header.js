@@ -20,12 +20,14 @@ export default function Header() {
   if (!mounted) {
     return null;
   }
+  console.log("current header theme " + theme);
+
   return (
-    <header>
+    <header className="relative z-30">
       <nav className="mt-8 flex items-center justify-between lg:mt-12">
         <BsFillBootstrapFill className="cursor-pointer text-3xl" />
         <div className="flex items-center justify-center bg-blue-950  rounded-full p-2 dark:bg-white">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={theme}
               initial={{ y: -10, opacity: 0 }}

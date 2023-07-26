@@ -1,18 +1,52 @@
 "use client";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function TransitionBackground() {
-  return <div className="transition-background"></div>;
-  //   return (
-  //     <>
-  /* <AnimatePresence initial={false}>
-        <motion.div
-          className="absolute top-0 right-0 w-full h-full bg-white text-blue-950 dark:bg-blue-950 dark:text-sky-400"
-          initial={{ clipPath: "circle(0% at 100% 0%)" }}
-          animate={{ clipPath: "circle(150% at 100% 0%);" }}
-          transition={{ ease: "linear", duration: 2 }}
-        ></motion.div>
-      </AnimatePresence> */
-  //     </>
-  //   );
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  console.log("theme changed to " + theme);
+  return (
+    <>
+      <AnimatePresence initial={false}>
+        {theme === "dark" ? (
+          <motion.div
+            // initial={{ backgroundColor: "white" }}
+            key={theme}
+            animate={{
+              clipPath: ["circle(0% at 100% 0%)", "circle(150% at 100% 0%)"],
+              backgroundColor: "white",
+            }}
+            className=" absolute top-0 right-0 z-10 w-full h-full"
+            transition={{
+              duration: 4,
+            }}
+          />
+        ) : (
+          <motion.div
+            // initial={{ backgroundColor: "black" }}
+            key={theme}
+            animate={{
+              clipPath: ["circle(0% at 100% 0%)", "circle(150% at 100% 0%)"],
+              backgroundColor: "black",
+            }}
+            className=" absolute top-0 right-0 z-10 w-full h-full"
+            transition={{
+              duration: 4,
+            }}
+          />
+        )}
+      </AnimatePresence>
+    </>
+  );
 }
