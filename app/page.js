@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import TransitionBackground from "./components/TransitionBackground";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
@@ -22,10 +23,7 @@ export default function Home() {
     <>
       {/* {loading && <TransitionBackground />} */}
       <Header setLoading={setLoading} />
-      {/* <main>
-
-      </main>
-      <footer></footer> */}
+      <Footer />
     </>
   );
 }
