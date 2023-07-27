@@ -63,7 +63,7 @@ export default function Header({ setLoading }) {
             </h1>
             <h1 className="text-4xl">From Yangon, Myanmar</h1>
           </div>
-          <h4 className="text-lg capitalize">
+          <h4 className="text-lg uppercase">
             I make great things with react and Node
           </h4>
           <button className="bg-pink-600 rounded-full px-6 py-3 cursor-pointer">
