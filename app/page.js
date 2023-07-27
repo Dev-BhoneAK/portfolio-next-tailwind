@@ -22,10 +22,10 @@ export default function Home() {
     <>
       {/* {loading && <TransitionBackground />} */}
       <Header setLoading={setLoading} />
-      <div className="z-20">
-        <h1 className="text-4xl">Hello World</h1>
-      </div>
-      <footer></footer>
+      {/* <main>
+
+      </main>
+      <footer></footer> */}
     </>
   );
 }

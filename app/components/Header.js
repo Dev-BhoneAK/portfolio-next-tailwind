@@ -23,11 +23,11 @@ export default function Header({ setLoading }) {
   console.log("current header theme " + theme);
 
   return (
-    <header className="relative z-30">
-      <nav className="mt-8 flex items-center justify-between lg:mt-12">
+    <header className="min-h-screen pt-8 lg:pt-12 flex flex-col">
+      <nav className="flex items-center justify-between">
         <BsFillBootstrapFill className="cursor-pointer text-3xl" />
         <div
-          className="flex items-center justify-center bg-blue-950  rounded-full p-2"
+          className="flex items-center justify-center bg-blue-950 rounded-full p-2 dark:bg-white"
           onClick={() => setLoading(true)}
         >
           <AnimatePresence mode="wait" initial={false}>
@@ -53,6 +53,24 @@ export default function Header({ setLoading }) {
           </AnimatePresence>
         </div>
       </nav>
+      <section className="flex items-center justify-center my-auto pb-24">
+        <div className="text-center space-y-6">
+          <h4 className="text-lg tracking-widest">HELLO</h4>
+          <div>
+            <h1 className="text-4xl">
+              I'm Bhone Aung Kyaw,{" "}
+              <span className="text-pink-600">Full-stack Developer.</span>
+            </h1>
+            <h1 className="text-4xl">From Yangon, Myanmar</h1>
+          </div>
+          <h4 className="text-lg capitalize">
+            I make great things with react and Node
+          </h4>
+          <button className="bg-pink-600 rounded-full px-6 py-3 cursor-pointer">
+            Get My Resume
+          </button>
+        </div>
+      </section>
     </header>
   );
 }
