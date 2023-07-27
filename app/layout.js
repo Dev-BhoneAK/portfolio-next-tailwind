@@ -13,11 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* <body
-        className={`container mx-auto bg-blue-950 dark:bg-white text-blue-950 dark:text-sky-400 ${leagueSpartan.className}`}
-      > */}
       <body
-        className={`container mx-auto bg-black dark:bg-white   ${leagueSpartan.className}`}
+        className={`container mx-auto bg-white dark:bg-blue-950 text-blue-950 dark:text-sky-400 ${leagueSpartan.className}`}
       >
         <Providers>{children}</Providers>
         {/* {children} */}
