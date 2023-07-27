@@ -40,7 +40,7 @@ export default function Header({ setLoading }) {
             >
               {theme === "dark" ? (
                 <BsFillMoonStarsFill
-                  className="cursor-pointer  text-lg text-blue-950"
+                  className="cursor-pointer text-lg text-blue-950"
                   onClick={() => setTheme("light")}
                 />
               ) : (
@@ -66,7 +66,7 @@ export default function Header({ setLoading }) {
           <h4 className="text-lg uppercase">
             I make great things with react and Node
           </h4>
-          <button className="bg-pink-600 rounded-full px-6 py-3 cursor-pointer">
+          <button className="bg-pink-600 text-white uppercase font-bold rounded-full px-6 py-3 cursor-pointer">
             Get My Resume
           </button>
         </div>
