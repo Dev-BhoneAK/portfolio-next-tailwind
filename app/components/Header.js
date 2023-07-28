@@ -61,7 +61,7 @@ export default function Header({ setLoading }) {
               I'm Bhone Aung Kyaw,{" "}
               <span className="text-pink-600">Full-stack Developer.</span>
             </h1>
-            <h1 className="text-4xl">From Yangon, Myanmar</h1>
+            <h1 className="text-4xl opacity-50">From Yangon, Myanmar</h1>
           </div>
           <h4 className="text-lg uppercase">
             I make great things with react and Node
