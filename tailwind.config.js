@@ -6,6 +6,14 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      xs: "640px",
+      sm: "768px",
+      md: "896px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -16,10 +24,14 @@ module.exports = {
         padding: {
           DEFAULT: "1rem",
           sm: "2rem",
+          md: "3rem",
           lg: "4rem",
           xl: "5rem",
           "2xl": "6rem",
         },
+      },
+      borderWidth: {
+        6: "6px",
       },
     },
   },
