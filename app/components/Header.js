@@ -6,30 +6,13 @@ import {
   BsSunFill,
 } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
 
-export default function Header({ setLoading }) {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-  console.log("current header theme " + theme);
-
+export default function Header({ theme, setTheme }) {
   return (
     <header className="min-h-screen pt-8 lg:pt-12 flex flex-col">
       <nav className="flex items-center justify-between">
         <BsFillBootstrapFill className="cursor-pointer text-3xl" />
-        <div
-          className="flex items-center justify-center bg-blue-950 rounded-full p-2 dark:bg-white"
-          onClick={() => setLoading(true)}
-        >
+        <div className="flex items-center justify-center bg-blue-950 rounded-full p-2 dark:bg-white">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={theme}
@@ -53,7 +36,7 @@ export default function Header({ setLoading }) {
           </AnimatePresence>
         </div>
       </nav>
-      <section className="flex items-center justify-center my-auto pb-24">
+      <section className="flex items-center justify-center my-auto">
         <div className="text-center space-y-6">
           <h4 className="text-lg tracking-widest">HELLO</h4>
           <div>
@@ -66,7 +49,7 @@ export default function Header({ setLoading }) {
           <h4 className="text-lg uppercase">
             I make great things with react and Node
           </h4>
-          <button className="bg-pink-600 text-white uppercase font-bold rounded-full px-6 py-3 cursor-pointer">
+          <button className="bg-pink-600 text-white uppercase font-bold rounded-full px-6 pt-3 pb-2 cursor-pointer">
             Get My Resume
           </button>
         </div>
