@@ -24,15 +24,19 @@ const SmallScreen = () => {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <Image src={ShwedagonPagoda} alt="Shwedagon Pagoda" className="-m-1" />
+        <Image
+          src={ShwedagonPagoda}
+          alt="Shwedagon Pagoda Project"
+          className="-m-1"
+        />
         <h4 className="text-lg text-left text-slate-200 font-semibold">
-          Web Designer - CE Technology
+          Web Designer - SeaNet Technology
         </h4>
         <p className="text-slate-400 text-base">
           Deliver high-quality, robust production code for a diverse array of
           projects for clients including SEA Games Equestrian 2013 in Myanmar,
-          Shwedagon Pagoda Website is one of the donation of CE Technology among
-          others. Actively particpated in drawing web design and software.
+          Shwedagon Pagoda Website is one of the donation of SeaNet Technology
+          among others. Actively particpated in drawing web design and software.
           Shwedagon Pagoda Website is one of the projects that I particpated in.
         </p>
       </motion.div>
@@ -55,12 +59,12 @@ const LargeScreen = () => {
         >
           <div className="bg-[#112240] p-4 rounded-md shadow-md">
             <h4 className="text-lg text-left text-slate-200 font-semibold mb-6">
-              Web Designer - CE Technology
+              Web Designer - SeaNet Technology
             </h4>
             <p className="text-slate-400 text-base">
               Deliver high-quality, robust production code for a diverse array
               of projects for clients including SEA Games Equestrian 2013 in
-              Myanmar, Shwedagon Pagoda Website is one of the donation of CE
+              Myanmar, Shwedagon Pagoda Website is one of the donation of SeaNet
               Technology among others. Actively particpated in drawing web
               design and software. Shwedagon Pagoda Website is one of the
               projects that I particpated in.
@@ -80,7 +84,7 @@ const LargeScreen = () => {
           <div className="h-3 min-w-[0.75rem] rounded-full bg-pink-600 mt-8"></div>
           <Image
             src={ShwedagonPagoda}
-            alt="Shwedagon Pagoda"
+            alt="Shwedagon Pagoda Project"
             className="min-w-0"
           />
         </motion.div>
