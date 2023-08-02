@@ -28,7 +28,7 @@ const SmallScreen = () => {
         <Image
           src={KitchenDisplay}
           alt="Kitchen Display System"
-          className="-mx-4"
+          className="-mx-4 mb-4"
         />
         <h4 className="text-lg text-left text-slate-200 font-semibold">
           Web Developer - Novitee
