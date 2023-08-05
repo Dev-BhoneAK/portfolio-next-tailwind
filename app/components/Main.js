@@ -1,6 +1,3 @@
-import React from "react";
-
-import Image from "next/image";
 import ShwedagonProject from "./main/career/ShwedagonProject";
 import KitchenDisplayProject from "./main/career/KitchenDisplayProject";
 import TayProject from "./main/career/TayProject";
@@ -13,6 +10,7 @@ import CharityProject from "../../public/portfolio/charity.gif";
 import InfotainmentProject from "../../public/portfolio/infotainment.png";
 import TestImage from "../../public/portfolio/web3.png";
 import PortfolioCard from "./common/PortfolioCard";
+import PortfolioCard2 from "./common/PortfolioCard2";
 
 export default function Main() {
   return (
@@ -38,17 +36,7 @@ export default function Main() {
           <PortfolioCard title="Ecommerce Website" image={EcommerceConsumer} />
           <PortfolioCard title="Charity Website" image={CharityProject} />
           <PortfolioCard title="Employee Poll" image={EmployeePoll} />
-          <div className="flex items-center justify-center col-span-2 border">
-            <div className="relative w-1/3">
-              <Image
-                // fill
-                alt="Ecommerce Admin Dashboard"
-                src={InfotainmentProject}
-                className="rounded-3xl "
-              />
-            </div>
-            {/* <PortfolioCard title="Infotainment" image={TestImage} /> */}
-          </div>
+          <PortfolioCard2 />
         </div>
       </section>
       {/* Portfolio Section */}
