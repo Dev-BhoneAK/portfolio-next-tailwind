@@ -15,11 +15,6 @@ html {
   color-scheme: initial !important;
 } */
 
-.btn {
-  /* margin-top: calc(50% + 25px); */
-  position: relative;
-  /* display: inline-block; */
-  width: 200px;
-  height: 50px;
-  /* transform: translate(-50%, -50%); */
+.custom-gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
 }
