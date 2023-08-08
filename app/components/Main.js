@@ -21,7 +21,7 @@ export default function Main() {
         <ShwedagonProject />
         <KitchenDisplayProject />
         <TayProject />
-        {/* <FootballMasterProject /> */}
+        <FootballMasterProject />
       </section>
       {/* Career Section */}
 

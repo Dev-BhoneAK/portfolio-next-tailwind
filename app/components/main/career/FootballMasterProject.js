@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import DreamLeague1 from "../../../../public/career/football-master/dl1.png";
 import DreamLeague2 from "../../../../public/career/football-master/dl2.png";
 import Livescore from "../../../../public/career/football-master/Livescore.png";
-import News from "../../../../public/career/football-master/news.png";
 
 export default function FootballMasterProject() {
   // const Data = [
@@ -17,6 +16,41 @@ export default function FootballMasterProject() {
 }
 
 const SmallScreen = () => {
+  const variants = {
+    center: {
+      x: "0rem",
+      scale: 1.1,
+      zIndex: "5",
+      filter: "brightness(100%)",
+      boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
+      transition: {
+        type: "spring",
+        duration: 1,
+      },
+    },
+    left: {
+      x: "-9rem",
+      filter: "brightness(50%)",
+      scale: 1,
+      zIndex: "4",
+      boxShadow: "unset",
+      transition: {
+        type: "spring",
+        duration: 1,
+      },
+    },
+    right: {
+      x: "9rem",
+      filter: "brightness(50%)",
+      scale: 1,
+      boxShadow: "unset",
+      zIndex: "3",
+      transition: {
+        type: "spring",
+        duration: 1,
+      },
+    },
+  };
   return (
     <div className="flex flex-col justify-center">
       {" "}
@@ -30,11 +64,27 @@ const SmallScreen = () => {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <Image
-          src={DreamLeague1}
-          alt="Kitchen Display System"
-          className="-mx-4"
-        />
+        <div className="flex items-center justify-center mt-4 mb-8">
+          <div className="w-1/2 -mr-20 xs:-mr-36 sm:-mr-44">
+            <Image
+              src={DreamLeague1}
+              alt="Kitchen Display System"
+              className=" brightness-50 rounded-3xl"
+            />
+          </div>
+          <div className="w-1/2 z-20 scale-110">
+            <Image
+              src={DreamLeague2}
+              alt="Kitchen Display System"
+              className="rounded-3xl"
+            />{" "}
+          </div>
+          {/* <Image
+            src={Livescore}
+            alt="Kitchen Display System"
+            className="w-1/2 -ml-20 xs:-ml-36 sm:-ml-44 brightness-50 rounded-3xl"
+          /> */}
+        </div>
         <h4 className="text-lg text-left text-slate-200 font-semibold">
           Senior Fullstack Developer - Myanmar Media Linkage
         </h4>
@@ -125,35 +175,7 @@ const LargeScreen = () => {
           viewport={{ once: true }}
           transition={{ duration: 2 }}
         >
-          <div className="min-w-0 border">
-            <motion.div className="relative min-w-0">
-              <AnimatePresence initial={false}>
-                <motion.div
-                  key={LeftId}
-                  variants={variants}
-                  initial={FlowDirection ? "center" : "leftHidden"}
-                  animate="left"
-                  exit={"leftHidden"}
-                  className="carousel-item"
-                ></motion.div>
-                <motion.div
-                  variants={variants}
-                  key={CenterId}
-                  initial={FlowDirection ? "right" : "left"}
-                  animate="center"
-                  className="carousel-item"
-                ></motion.div>
-                <motion.div
-                  key={RightId}
-                  variants={variants}
-                  initial={FlowDirection ? "rightHidden" : "center"}
-                  animate="right"
-                  exit={"rightHidden"}
-                  className="carousel-item"
-                ></motion.div>
-              </AnimatePresence>
-            </motion.div>
-          </div>
+          <div className="min-w-0 border"></div>
           <div className="h-3 min-w-[0.75rem] rounded-full bg-pink-600 mt-8"></div>
         </motion.div>
 
