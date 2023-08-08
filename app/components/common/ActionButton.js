@@ -29,12 +29,12 @@ export default function ActionButton() {
         animate="hidden"
       >
         <svg className="absolute">
-          <defs>
+          {/* <defs>
             <linearGradient id="grad1">
               <stop offset="0%" stop-color="#FF8282" />
               <stop offset="100%" stop-color="#db2777" />
             </linearGradient>
-          </defs>
+          </defs> */}
           <motion.rect
             x="1"
             y="1"
