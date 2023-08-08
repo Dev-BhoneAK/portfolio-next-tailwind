@@ -22,7 +22,7 @@ export default function PortfolioCard({ title, image }) {
         src={image}
         className="rounded-3xl object-fill brightness-90"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black rounded-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black rounded-3xl"></div>
       <motion.div
         className="absolute bottom-6 left-6 md:bottom-10 md:left-10 opacity-1 md:opacity-0 group-hover:opacity-100 text-white text-left"
         // variants={animation}
