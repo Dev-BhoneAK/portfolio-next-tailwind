@@ -28,7 +28,7 @@ export default function Main() {
       {/* Portfolio Section */}
       <section className="space-y-10 md:space-y-20 mb-24 md:mb-28">
         <h2 className="text-3xl text-center">My Personal Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
           <PortfolioCard
             title="Ecommerce Admin Dashboard"
             image={EcommerceConsumer2}
