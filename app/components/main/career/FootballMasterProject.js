@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useMediaQuery } from "@/app/hooks/useMediaQuery";
 import { motion, AnimatePresence } from "framer-motion";
-import DreamLeague1 from "../../../../public/career/football-master/dl1.png";
-import DreamLeague2 from "../../../../public/career/football-master/dl2.png";
-import Livescore from "../../../../public/career/football-master/Livescore.png";
 
 export default function FootballMasterProject() {
   // const Data = [
@@ -16,12 +13,59 @@ export default function FootballMasterProject() {
 }
 
 const SmallScreen = () => {
+  const Data = [
+    "/career/football-master/fm0.png",
+    "/career/football-master/fm1.png",
+    "/career/football-master/fm2.png",
+  ];
+  const [CenterId, setCenterId] = useState(0);
+  const [LeftId, setLeftId] = useState(Data.length - 1);
+  const [RightId, setRightId] = useState(1);
+
+  const nextBtn = () => {
+    if (LeftId === Data.length - 1) {
+      setLeftId(0);
+    } else {
+      setLeftId(LeftId + 1);
+    }
+    if (CenterId === Data.length - 1) {
+      setCenterId(0);
+    } else {
+      setCenterId(CenterId + 1);
+    }
+
+    if (RightId === Data.length - 1) {
+      setRightId(0);
+    } else {
+      setRightId(RightId + 1);
+    }
+  };
+  const isPhoneScreen = useMediaQuery("(max-width: 420px)");
+  // useEffect(() => {
+  //   const id = setInterval(
+  //     () =>
+  //       setCenter((prevState) =>
+  //         prevState == "center"
+  //           ? "left"
+  //           : prevState == "left"
+  //           ? "right"
+  //           : "center"
+  //       ),
+  //     5000
+  //   );
+
+  //   return () => {
+  //     clearInterval(id);
+  //   };
+  // }, []);
   const variants = {
     center: {
       x: "0rem",
-      scale: 1.1,
+      opacity: 1,
+      scale: 1.2,
       zIndex: "5",
       filter: "brightness(100%)",
+      backgroundImage: "url(" + Data[CenterId] + ")",
       boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
@@ -29,9 +73,11 @@ const SmallScreen = () => {
       },
     },
     left: {
-      x: "-9rem",
-      filter: "brightness(50%)",
+      x: "1rem",
+      opacity: 1,
+      filter: "brightness(40%)",
       scale: 1,
+      backgroundImage: "url(" + Data[LeftId] + ")",
       zIndex: "4",
       boxShadow: "unset",
       transition: {
@@ -40,8 +86,10 @@ const SmallScreen = () => {
       },
     },
     right: {
-      x: "9rem",
-      filter: "brightness(50%)",
+      backgroundImage: "url(" + Data[RightId] + ")",
+      x: "0rem",
+      opacity: 1,
+      filter: "brightness(40%)",
       scale: 1,
       boxShadow: "unset",
       zIndex: "3",
@@ -64,26 +112,35 @@ const SmallScreen = () => {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <div className="flex items-center justify-center mt-4 mb-8">
-          <div className="w-1/2 -mr-20 xs:-mr-36 sm:-mr-44">
-            <Image
-              src={DreamLeague1}
-              alt="Kitchen Display System"
-              className=" brightness-50 rounded-3xl"
-            />
-          </div>
-          <div className="w-1/2 z-20 scale-110">
-            <Image
-              src={DreamLeague2}
-              alt="Kitchen Display System"
-              className="rounded-3xl"
-            />{" "}
-          </div>
-          {/* <Image
-            src={Livescore}
-            alt="Kitchen Display System"
-            className="w-1/2 -ml-20 xs:-ml-36 sm:-ml-44 brightness-50 rounded-3xl"
-          /> */}
+        <div
+          className="flex items-stretch justify-center my-8 sm:my-12 h-60"
+          onClick={() => nextBtn()}
+        >
+          <AnimatePresence initial={false}>
+            <motion.div
+              key={LeftId}
+              variants={variants}
+              initial="center"
+              animate="left"
+              // exit={"leftHidden"}
+              className="w-full carousel-item"
+            ></motion.div>
+            <motion.div
+              variants={variants}
+              key={CenterId}
+              initial="right"
+              animate="center"
+              className="w-full carousel-item"
+            ></motion.div>
+            <motion.div
+              key={RightId}
+              variants={variants}
+              initial="left"
+              animate="right"
+              // exit={"rightHidden"}
+              className="w-full carousel-item"
+            ></motion.div>
+          </AnimatePresence>
         </div>
         <h4 className="text-lg text-left text-slate-200 font-semibold">
           Senior Fullstack Developer - Myanmar Media Linkage
@@ -115,7 +172,7 @@ const LargeScreen = () => {
       zIndex: "5",
       filter: "brightness(100%)",
       //   backgroundImage: "url(" + Data[CenterId] + ")",
-      backgroundImage: "url(/career/football-master/dl2.png)",
+      backgroundImage: "url(/career/football-master/fm1.png)",
 
       boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
@@ -131,7 +188,7 @@ const LargeScreen = () => {
       //   backgroundImage:
       // "url('https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=662&q=80')",
       //   backgroundImage: `${Livescore}`,
-      backgroundImage: "url(/career/football-master/dl1.png)",
+      backgroundImage: "url(/career/football-master/fm0.png)",
       zIndex: "4",
       boxShadow: "unset",
       transition: {
@@ -141,7 +198,7 @@ const LargeScreen = () => {
     },
     right: {
       //   backgroundImage: "url(" + Data[RightId] + ")",
-      backgroundImage: "url(/career/football-master/livescore.png)",
+      backgroundImage: "url(/career/football-master/fm2.png)",
       x: "6rem",
       opacity: 1,
       filter: "brightness(40%)",
