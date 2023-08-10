@@ -51,7 +51,7 @@ export default function ActionButton() {
           href="http://marcel-pirnay.be/"
           className="absolute top-[0.4rem] left-[0.65rem] bg-pink-600 text-white uppercase font-bold rounded-full px-6 pt-3 pb-2"
         >
-          Get My Resume
+          Get In Touch
         </a>
       </motion.div>
     </div>
