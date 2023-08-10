@@ -16,7 +16,7 @@ const SmallScreen = () => {
       {" "}
       <h3 className="text-xl text-center mb-2">2018</h3>
       <div className="h-3 w-3 rounded-full bg-pink-600 self-center mb-1"></div>
-      <div className="h-8 border-l-4 border-dotted self-center"></div>
+      <div className="h-8 border-l-6 border-dotted self-center border-sky-500"></div>
       <motion.div
         className="bg-[#112240] p-4 rounded-md shadow-md"
         initial={{ y: 100, opacity: 0 }}
@@ -24,11 +24,11 @@ const SmallScreen = () => {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <Image src={Tay} alt="Tay Project" className="-m-1" />
-        <h4 className="text-lg text-left text-slate-200 font-semibold">
-          Fullstack Developer - Myanmar Media Linkage
+        <Image src={Tay} alt="Tay Project" className="mb-4" />
+        <h4 className="text-xl text-left text-slate-200 font-semibold mb-2">
+          Fullstack Developer - MML
         </h4>
-        <p className="text-slate-400 text-base">
+        <p className="text-slate-400 text-lg">
           Deliver high-quality, robust production code for a diverse array of
           projects for clients including SEA Games Equestrian 2013 in Myanmar,
           Shwedagon Pagoda Website is one of the donation of CE Technology among
@@ -36,7 +36,7 @@ const SmallScreen = () => {
           Shwedagon Pagoda Website is one of the projects that I particpated in.
         </p>
       </motion.div>
-      <div className="h-8 border-l-4 border-dotted self-center"></div>
+      <div className="h-8 border-l-6 border-dotted self-center border-sky-500"></div>
     </div>
   );
 };
@@ -54,10 +54,10 @@ const LargeScreen = () => {
           transition={{ duration: 2 }}
         >
           <div className="bg-[#112240] p-4 rounded-md shadow-md">
-            <h4 className="text-lg text-left text-slate-200 font-semibold mb-6">
+            <h4 className="text-xl text-left text-slate-200 font-semibold mb-6">
               Fullstack Developer - Myanmar Media Linkage
             </h4>
-            <p className="text-slate-400 text-base">
+            <p className="text-slate-400 text-lg">
               Deliver high-quality, robust production code for a diverse array
               of projects for clients including SEA Games Equestrian 2013 in
               Myanmar, Shwedagon Pagoda Website is one of the donation of CE
