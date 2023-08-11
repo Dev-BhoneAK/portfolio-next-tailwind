@@ -1,46 +1,121 @@
-import React from "react";
 import Image from "next/image";
 import ToolsTag from "./ToolsTag";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { useMediaQuery } from "@/app/hooks/useMediaQuery";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
+import InfotainmentProject from "../../../public/portfolio/infotainment.png";
+import Web6 from "../../../public/portfolio/web6.png";
 
-export default function PortfolioCard({ title, image }) {
+export default function PortfolioCard({ title, image, description, tagNames }) {
+  const isSmallScreen = useMediaQuery("(max-width: 896px)");
   const animation = {
-    initial: { y: -20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     animate: { y: 0, opacity: 1 },
-    exit: { y: 20, opacity: 0 },
     transition: { duration: 2 },
   };
+  const textVariants = {
+    hidden: {
+      y: 50,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const iconVariants = {
+    hidden: {
+      opacity: 0,
+      y: -50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  const brightnessVariants = {
+    hidden: {
+      filter: "brightness(100%)",
+    },
+    visible: {
+      filter: "brightness(40%)",
+    },
+  };
+
+  const displayVariants = {
+    hidden: {
+      display: "none",
+    },
+    visible: {
+      display: "block",
+    },
+  };
+  const attributes = isSmallScreen
+    ? {
+        whileInView: "visible",
+      }
+    : { whileHover: "visible" };
+
+  const transitions = {
+    transition: {
+      duration: 0.5,
+    },
+  };
+
   return (
+    // <div className="flex items-center justify-center md:col-span-2">
     <motion.div
-      className="relative group h-96 m-1 md:m-8 cursor-pointer"
-      whileHover="animate"
+      className="relative w-full"
+      initial="hidden"
+      {...attributes}
+      animate="hidden"
     >
-      <Image
-        fill
-        alt="Ecommerce Admin Dashboard"
-        src={image}
-        className="rounded-3xl object-fill brightness-90"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black rounded-3xl"></div>
       <motion.div
-        className="absolute bottom-6 left-6 md:bottom-10 md:left-10 opacity-1 md:opacity-0 group-hover:opacity-100 text-white text-left"
-        // variants={animation}
+        variants={brightnessVariants}
+        {...transitions}
+        className="h-full"
       >
-        <h3 className="mb-4 text-2xl">{title}</h3>
+        <Image alt={title} src={image} className="rounded-3xl w-full h-full" />
+      </motion.div>
+      <motion.div
+        className="absolute inset-0 custom-gradient rounded-3xl"
+        variants={displayVariants}
+        {...transitions}
+      ></motion.div>
+
+      <motion.div
+        className="absolute top-6 left-6  text-2xl text-white cursor-pointer md:top-8 md:left-8 "
+        variants={iconVariants}
+        {...transitions}
+        //   viewport={{ once: true }}
+      >
+        <FiExternalLink />
+      </motion.div>
+      <motion.div
+        className="absolute top-6 right-6  text-2xl text-white cursor-pointer md:top-8 md:right-8"
+        variants={iconVariants}
+        {...transitions}
+        //   viewport={{ once: true }}
+      >
+        <FiGithub />
+      </motion.div>
+      <motion.div
+        className="absolute bottom-6 left-6 text-white text-left md:bottom-10 md:left-8"
+        //   viewport={{ once: true }}
+        variants={textVariants}
+        {...transitions}
+      >
+        <h3 className="mb-1 text-2xl">{title}</h3>
+        <p className="text-lg text-slate-300 mb-4">{description}</p>
         <p>
-          <ToolsTag tagName="Express" />
-          <ToolsTag tagName="React" />
-          <ToolsTag tagName="Docker" />
-          <ToolsTag tagName="AWS" />
+          {tagNames.map((tagName) => (
+            <ToolsTag tagName={tagName} />
+          ))}
         </p>
       </motion.div>
-      <div className="absolute top-6 left-6 md:top-8 md:left-10 opacity-1 md:opacity-0 group-hover:opacity-100 text-xl text-white">
-        <FaExternalLinkAlt />
-      </div>
-      <div className="absolute top-6 right-6 md:top-8 md:right-10 opacity-1 md:opacity-0 group-hover:opacity-100 text-xl text-white">
-        <FaGithub />
-      </div>
     </motion.div>
+    // </div>
   );
 }
