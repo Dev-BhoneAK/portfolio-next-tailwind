@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ImHeart } from "react-icons/im";
 import { FiGithub, FiTwitter, FiInstagram, FiMail } from "react-icons/fi";
 
