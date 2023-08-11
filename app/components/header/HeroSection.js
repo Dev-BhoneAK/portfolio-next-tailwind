@@ -14,10 +14,10 @@ export default function HeroSection() {
             From Yangon, Myanmar
           </h1>
         </div>
-        <h4 className="text-base md:text-lg uppercase tracking-wide md:tracking-wider">
+        <h4 className="text-base md:text-lg uppercase tracking-normal sm:tracking-wide md:tracking-wider">
           I make great things using react and Node
         </h4>
-        <ActionButton />
+        {/* <ActionButton /> */}
       </div>
     </section>
   );
