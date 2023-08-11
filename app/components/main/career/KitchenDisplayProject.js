@@ -17,7 +17,7 @@ const SmallScreen = () => {
       {" "}
       <h3 className="text-xl text-center mb-2">2015</h3>
       <div className="h-3 w-3 rounded-full bg-pink-600 self-center mb-1"></div>
-      <div className="h-8 border-l-6 border-dotted self-center border-sky-500"></div>
+      <div className="h-8 border-l-6 border-dotted self-center border-sky-700"></div>
       <motion.div
         className="bg-[#112240] p-4 rounded-md shadow-md"
         initial={{ y: 100, opacity: 0 }}
@@ -41,7 +41,7 @@ const SmallScreen = () => {
           Shwedagon Pagoda Website is one of the projects that I particpated in.
         </p>
       </motion.div>
-      <div className="h-8 border-l-6 border-dotted self-center border-sky-500"></div>
+      <div className="h-8 border-l-6 border-dotted self-center border-sky-700"></div>
     </div>
   );
 };
@@ -66,7 +66,7 @@ const LargeScreen = () => {
           <div className="h-3 min-w-[0.75rem] rounded-full bg-pink-600 mt-8"></div>
         </motion.div>
 
-        <div className="h-auto border-l-6 border-dotted border-sky-500"></div>
+        <div className="h-auto border-l-6 border-dotted border-sky-700"></div>
 
         <motion.div
           className="flex space-x-3 w-1/2 max-w-lg self-center"
