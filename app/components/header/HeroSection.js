@@ -17,7 +17,7 @@ export default function HeroSection() {
         <h4 className="text-base md:text-lg uppercase tracking-normal sm:tracking-wide md:tracking-wider">
           I make great things using react and Node
         </h4>
-        {/* <ActionButton /> */}
+        <ActionButton />
       </div>
     </section>
   );
