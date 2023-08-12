@@ -1,14 +1,14 @@
 import EmployeePoll from "../../public/portfolio/employee-poll.png";
 import CharityProject from "../../public/portfolio/charity.gif";
 import InfotainmentProject from "../../public/portfolio/infotainment.png";
-import TestImage from "../../public/portfolio/web3.png";
+// import TestImage from "../../public/portfolio/web3.png";
 import EcommerceClient from "../../public/portfolio/ecommerce-client.gif";
-// import EcommerceAdmin from "../../public/portfolio/ecommerce-admin.png";
+import EcommerceAdmin from "../../public/portfolio/ecommerce-admin.png";
 
 const portfolioData = [
   {
     title: "Ecommerce Admin Dashboard",
-    image: EcommerceClient,
+    image: EcommerceAdmin,
     description: "Admin Dashboard For Ecommerce Website",
     tagNames: ["react", "node", "bootstrap", "docker", "aws"],
   },
@@ -31,9 +31,10 @@ const portfolioData = [
     tagNames: ["react", "firebase", "scss", "aws"],
   },
   {
-    title: "Mobile First Infotainment Web App",
+    title: "Infotainment Web App",
     image: InfotainmentProject,
-    description: "Presented a collection of information and entertainment",
+    description:
+      "Collection of information and entertainment presentation with Mobile First UI",
     tagNames: ["react", "node", "material-ui", "aws"],
   },
 ];
