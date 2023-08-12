@@ -73,7 +73,7 @@ export default function PortfolioCard({
   return (
     // <div className="flex items-center justify-center md:col-span-2">
     <motion.div
-      className={`relative ${widthFlag ? "w-1/3" : "w-full"}`}
+      className={`relative ${widthFlag ? "w-full md:w-1/3" : "w-full h-96"}`}
       initial="hidden"
       {...attributes}
       animate="hidden"
@@ -83,7 +83,12 @@ export default function PortfolioCard({
         {...transitions}
         className="h-full"
       >
-        <Image alt={title} src={image} className="rounded-3xl w-full h-full" priority={true}/>
+        <Image
+          alt={title}
+          src={image}
+          className="rounded-3xl w-full h-full"
+          priority={true}
+        />
       </motion.div>
       <motion.div
         className="absolute inset-0 custom-gradient rounded-3xl"
@@ -114,7 +119,9 @@ export default function PortfolioCard({
         {...transitions}
       >
         <h3 className="mb-1 text-2xl">{title}</h3>
-        <p className="text-lg text-slate-300 mb-4">{description}</p>
+        <p className="text-lg text-slate-400 mb-4 leading-tight">
+          {description}
+        </p>
         <p>
           {tagNames.map((tagName) => (
             <ToolsTag key={tagName} tagName={tagName} />
