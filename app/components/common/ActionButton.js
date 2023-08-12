@@ -20,8 +20,28 @@ export default function ActionButton() {
       },
     },
   };
+  const buttonVariants = {
+    hidden: {
+      y: 20,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 2,
+        delay: 1,
+      },
+    },
+  };
   return (
-    <div className="flex w-full items-center justify-center">
+    <motion.div
+      className="flex w-full items-center justify-center"
+      initial="hidden"
+      animate="visible"
+      variants={buttonVariants}
+    >
       <motion.svg
         width="200"
         height="60"
@@ -71,6 +91,6 @@ export default function ActionButton() {
           </a>
         </foreignObject>
       </motion.svg>
-    </div>
+    </motion.div>
   );
 }
