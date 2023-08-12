@@ -15,7 +15,7 @@ const SmallScreen = () => {
   return (
     <div className="flex flex-col justify-center">
       {" "}
-      <h3 className="text-xl text-center mb-2">2015</h3>
+      <h3 className="text-2xl text-center mb-2">2015</h3>
       <div className="h-3 w-3 rounded-full bg-pink-600 self-center mb-1"></div>
       <div className="h-8 border-l-6 border-dotted self-center border-sky-700"></div>
       <motion.div
@@ -49,7 +49,7 @@ const SmallScreen = () => {
 const LargeScreen = () => {
   return (
     <div className="flex flex-col justify-center">
-      <h3 className="text-xl text-center mb-2">2015</h3>
+      <h3 className="text-2xl text-center mb-2">2015</h3>
       <div className="flex justify-center space-x-6">
         <motion.div
           className="flex space-x-2 w-1/2 max-w-lg"
