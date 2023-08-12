@@ -6,7 +6,13 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 import InfotainmentProject from "../../../public/portfolio/infotainment.png";
 import Web6 from "../../../public/portfolio/web6.png";
 
-export default function PortfolioCard({ title, image, description, tagNames }) {
+export default function PortfolioCard({
+  title,
+  image,
+  description,
+  tagNames,
+  widthFlag,
+}) {
   const isSmallScreen = useMediaQuery("(max-width: 896px)");
   const animation = {
     hidden: { y: 20, opacity: 0 },
@@ -67,7 +73,7 @@ export default function PortfolioCard({ title, image, description, tagNames }) {
   return (
     // <div className="flex items-center justify-center md:col-span-2">
     <motion.div
-      className="relative w-full"
+      className={`relative ${widthFlag ? "w-1/3" : "w-full"}`}
       initial="hidden"
       {...attributes}
       animate="hidden"
@@ -77,7 +83,7 @@ export default function PortfolioCard({ title, image, description, tagNames }) {
         {...transitions}
         className="h-full"
       >
-        <Image alt={title} src={image} className="rounded-3xl w-full h-full" />
+        <Image alt={title} src={image} className="rounded-3xl w-full h-full" priority={true}/>
       </motion.div>
       <motion.div
         className="absolute inset-0 custom-gradient rounded-3xl"
@@ -111,7 +117,7 @@ export default function PortfolioCard({ title, image, description, tagNames }) {
         <p className="text-lg text-slate-300 mb-4">{description}</p>
         <p>
           {tagNames.map((tagName) => (
-            <ToolsTag tagName={tagName} />
+            <ToolsTag key={tagName} tagName={tagName} />
           ))}
         </p>
       </motion.div>
