@@ -13,7 +13,7 @@ export default function ActionButton() {
     },
     visible: {
       opacity: 1,
-      pathLength: 1,
+      pathLength: 1.1,
       transition: {
         duration: 1,
         ease: "easeInOut",
@@ -22,38 +22,55 @@ export default function ActionButton() {
   };
   return (
     <div className="flex w-full items-center justify-center">
-      <motion.div
-        className="relative w-48 h-14"
+      <motion.svg
+        width="200"
+        height="60"
         initial="hidden"
         whileHover="visible"
         animate="hidden"
       >
-        <svg className="absolute">
-          {/* <defs>
+        {/* <defs>
             <linearGradient id="grad1">
               <stop offset="0%" stop-color="#FF8282" />
               <stop offset="100%" stop-color="#db2777" />
             </linearGradient>
           </defs> */}
-          <motion.rect
-            x="1"
-            y="1"
-            rx="28"
-            fill="none"
-            stroke="#db2777"
-            width="185"
-            height="55"
-            variants={pathVariants}
-          ></motion.rect>
-        </svg>
-
-        <a
-          href="http://marcel-pirnay.be/"
-          className="absolute top-[0.4rem] left-[0.65rem] bg-pink-600 text-white uppercase font-bold rounded-full px-6 pt-3 pb-2"
+        {/* <motion.rect
+          x="1"
+          y="1"
+          rx="28"
+          fill="none"
+          stroke="#db2777"
+          width="185"
+          height="55"
+          variants={pathVariants}
+        ></motion.rect> */}
+        <motion.rect
+          width="180"
+          height="50"
+          x="50%"
+          y="50%"
+          transform="translate(-90,-25)"
+          rx="24"
+          fill="none"
+          stroke="#db2777"
+          variants={pathVariants}
+        ></motion.rect>
+        <foreignObject
+          x="50%"
+          y="50%"
+          transform="translate(-85,-20)"
+          width="170"
+          height="40"
         >
-          Get In Touch
-        </a>
-      </motion.div>
+          <a
+            href="mailto:bhoneak@outlook.com"
+            className="bg-pink-600 text-white uppercase font-semibold tracking-wider w-full h-full inline-block rounded-full px-6 pt-2"
+          >
+            Get In Touch
+          </a>
+        </foreignObject>
+      </motion.svg>
     </div>
   );
 }
