@@ -26,14 +26,30 @@ export default function Main() {
       <section className="space-y-10 md:space-y-28 mb-24 md:mb-36">
         <h2 className="text-3xl text-center">My Personal Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
-          {portfolioData.map((portfolio) => (
-            <PortfolioCard
-              title={portfolio.title}
-              image={portfolio.image}
-              description={portfolio.description}
-              tagNames={portfolio.tagNames}
-            />
-          ))}
+          {portfolioData.map((portfolio, index) =>
+            index === 4 ? (
+              <div
+                className="flex items-center justify-center md:col-span-2"
+                key={portfolio.title}
+              >
+                <PortfolioCard
+                  title={portfolio.title}
+                  image={portfolio.image}
+                  description={portfolio.description}
+                  tagNames={portfolio.tagNames}
+                  widthFlag
+                />
+              </div>
+            ) : (
+              <PortfolioCard
+                key={portfolio.title}
+                title={portfolio.title}
+                image={portfolio.image}
+                description={portfolio.description}
+                tagNames={portfolio.tagNames}
+              />
+            )
+          )}
           {/* <OldPortfolioCard
             title="Ecommerce Admin Dashboard"
             image={EcommerceClient}
