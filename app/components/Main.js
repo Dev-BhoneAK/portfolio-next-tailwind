@@ -7,8 +7,6 @@ import portfolioData from "../utils/portfolioData";
 import PortfolioCard from "./common/PortfolioCard";
 import EcommerceClient from "../../public/portfolio/ecommerce-client.gif";
 
-import OldPortfolioCard from "./common/OldPortfolioCard";
-
 export default function Main() {
   return (
     <main>
