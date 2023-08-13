@@ -5,7 +5,6 @@ import FootballMasterProject from "./main/career/FootballMasterProject";
 
 import portfolioData from "../utils/portfolioData";
 import PortfolioCard from "./common/PortfolioCard";
-import EcommerceClient from "../../public/portfolio/ecommerce-client.gif";
 
 export default function Main() {
   return (
@@ -48,23 +47,6 @@ export default function Main() {
               />
             )
           )}
-          {/* <OldPortfolioCard
-            title="Ecommerce Admin Dashboard"
-            image={EcommerceClient}
-          /> */}
-          {/* <PortfolioCard title="Ecommerce Website" image={EcommerceConsumer} />
-          <PortfolioCard title="Charity Website" image={CharityProject} />
-          <PortfolioCard title="Employee Poll" image={EmployeePoll} />
-          <PortfolioCard2 /> */}
-          {/* <Image
-            alt="Ecommerce Admin Dashboard"
-            src={Web6}
-            className="rounded-3xl"
-          /> */}
-          {/* <img
-            src="/public/portfolio/web6.png"
-            alt="Ecommerce Admin Dashboard"
-          /> */}
         </div>
       </section>
       {/* Portfolio Section */}

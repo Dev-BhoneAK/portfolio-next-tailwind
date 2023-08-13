@@ -10,13 +10,13 @@ const portfolioData = [
     title: "Ecommerce Admin Dashboard",
     image: EcommerceAdmin,
     description: "Admin Dashboard For Ecommerce Website",
-    tagNames: ["react", "node", "bootstrap", "docker", "aws"],
+    tagNames: ["react", "node", "docker", "aws"],
   },
   {
     title: "Ecommerce Client",
     image: EcommerceClient,
     description: "Ecommerce Website for Clients",
-    tagNames: ["react", "node", "bootstrap", "docker", "aws"],
+    tagNames: ["react", "node", "docker", "aws"],
   },
   {
     title: "Charity & Fundraising",

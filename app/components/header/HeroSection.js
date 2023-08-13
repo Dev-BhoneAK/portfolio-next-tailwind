@@ -36,7 +36,7 @@ export default function HeroSection() {
               From Yangon, Myanmar
             </h1>
           </div>
-          <h4 className="text-lg md:text-xl uppercase tracking-wide md:tracking-wider">
+          <h4 className="text-lg md:text-xl uppercase tracking-normal md:tracking-wider">
             I craft web stuff using React and Node
           </h4>
         </motion.div>
