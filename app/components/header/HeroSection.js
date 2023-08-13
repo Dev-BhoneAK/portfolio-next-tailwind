@@ -29,7 +29,7 @@ export default function HeroSection() {
           <h4 className="text-base md:text-lg tracking-widest">HELLO</h4>
           <div>
             <h1 className="text-4xl mb-1">
-              I'm Bhone Aung Kyaw,{" "}
+              I&apos;m Bhone Aung Kyaw,{" "}
               <span className="text-pink-600">Full-stack Developer.</span>
             </h1>
             <h1 className="text-3xl md:text-4xl opacity-50">
