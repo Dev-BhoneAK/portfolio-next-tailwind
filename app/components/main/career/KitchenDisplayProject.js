@@ -28,6 +28,8 @@ const SmallScreen = () => {
         <Image
           src={KitchenDisplay}
           alt="Kitchen Display System"
+          loading="lazy"
+          placeholder="blur"
           className="mb-4"
         />
         <h4 className="text-xl text-left text-slate-200 font-semibold mb-2">
@@ -61,6 +63,8 @@ const LargeScreen = () => {
           <Image
             src={KitchenDisplay}
             alt="Kitchen Display System"
+            loading="lazy"
+            placeholder="blur"
             className="min-w-0"
           />
           <div className="h-3 min-w-[0.75rem] rounded-full bg-pink-600 mt-8"></div>

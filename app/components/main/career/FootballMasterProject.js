@@ -7,9 +7,6 @@ import DreamLeague2 from "../../../../public/career/football-master/fm1.png";
 import Livescore from "../../../../public/career/football-master/fm2.png";
 
 export default function FootballMasterProject() {
-  // const Data = [
-  //     ''
-  // ]
   const isSmallScreen = useMediaQuery("(max-width: 896px)");
 
   return isSmallScreen ? <SmallScreen /> : <LargeScreen />;
@@ -18,30 +15,30 @@ export default function FootballMasterProject() {
 const SmallScreen = () => {
   const [isCenter, setCenter] = useState("center");
 
-  // useEffect(() => {
-  //   const id = setInterval(
-  //     () =>
-  //       setCenter((prevState) =>
-  //         prevState == "center"
-  //           ? "left"
-  //           : prevState == "left"
-  //           ? "right"
-  //           : "center"
-  //       ),
-  //     5000
-  //   );
+  useEffect(() => {
+    const interval = setInterval(
+      () =>
+        setCenter((prevState) =>
+          prevState == "center"
+            ? "left"
+            : prevState == "left"
+            ? "right"
+            : "center"
+        ),
+      4000
+    );
 
-  //   return () => {
-  //     clearInterval(id);
-  //   };
-  // }, []);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   const variants = {
     center: {
       x: 0,
       scale: 1.3,
       zIndex: "5",
       filter: "brightness(100%)",
-      // boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
         duration: 1,
@@ -52,7 +49,6 @@ const SmallScreen = () => {
       scale: 1.1,
       zIndex: "3",
       filter: "brightness(40%)",
-      // boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
         duration: 1,
@@ -63,7 +59,6 @@ const SmallScreen = () => {
       scale: 1.1,
       zIndex: "3",
       filter: "brightness(40%)",
-      // boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
         duration: 1,
@@ -74,7 +69,6 @@ const SmallScreen = () => {
       filter: "brightness(40%)",
       scale: 1.1,
       zIndex: "4",
-      // boxShadow: "unset",
       transition: {
         type: "spring",
         duration: 1,
@@ -85,7 +79,6 @@ const SmallScreen = () => {
       scale: 1.3,
       zIndex: "5",
       filter: "brightness(100%)",
-      // boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
         duration: 1,
@@ -95,7 +88,6 @@ const SmallScreen = () => {
       x: "200%",
       filter: "brightness(40%)",
       scale: 1.1,
-      // boxShadow: "unset",
       zIndex: "3",
       transition: {
         type: "spring",
@@ -106,7 +98,6 @@ const SmallScreen = () => {
       x: "-8%",
       filter: "brightness(40%)",
       scale: 1.1,
-      // boxShadow: "unset",
       zIndex: "3",
       transition: {
         type: "spring",
@@ -118,7 +109,6 @@ const SmallScreen = () => {
       scale: 1.3,
       zIndex: "5",
       filter: "brightness(100%)",
-      // boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
         duration: 1,
@@ -128,7 +118,6 @@ const SmallScreen = () => {
       x: "-200%",
       filter: "brightness(40%)",
       scale: 1.1,
-      // boxShadow: "unset",
       zIndex: "3",
       transition: {
         type: "spring",
@@ -146,21 +135,11 @@ const SmallScreen = () => {
         className="bg-[#112240] p-4 rounded-md shadow-md"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
+        when="beforeChildren"
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <div
-          className="flex items-center justify-center mt-8 mb-14 xs:mt-16 xs:mb-20"
-          onClick={() =>
-            setCenter((prevState) =>
-              prevState == "center"
-                ? "left"
-                : prevState == "left"
-                ? "right"
-                : "center"
-            )
-          }
-        >
+        <div className="flex items-center justify-center mt-8 mb-14 xs:mt-16 xs:mb-20">
           <motion.div
             initial="left"
             animate={
@@ -175,7 +154,9 @@ const SmallScreen = () => {
           >
             <Image
               src={DreamLeague1}
-              alt="Kitchen Display System"
+              alt="Dream League - Before Choosing Players"
+              loading="lazy"
+              placeholder="blur"
               className="rounded-xl sm:rounded-2xl"
             />
           </motion.div>
@@ -193,7 +174,9 @@ const SmallScreen = () => {
           >
             <Image
               src={DreamLeague2}
-              alt="Kitchen Display System"
+              alt="Dream League - After Choosing Players"
+              loading="lazy"
+              placeholder="blur"
               className="rounded-xl sm:rounded-2xl"
             />
           </motion.div>
@@ -211,7 +194,9 @@ const SmallScreen = () => {
           >
             <Image
               src={Livescore}
-              alt="Kitchen Display System"
+              alt="Livescore Screen"
+              loading="lazy"
+              placeholder="blur"
               className="rounded-xl sm:rounded-2xl"
             />
           </motion.div>
@@ -235,30 +220,29 @@ const SmallScreen = () => {
 const LargeScreen = () => {
   const [isCenter, setCenter] = useState("center");
 
-  // useEffect(() => {
-  //   const id = setInterval(
-  //     () =>
-  //       setCenter((prevState) =>
-  //         prevState == "center"
-  //           ? "left"
-  //           : prevState == "left"
-  //           ? "right"
-  //           : "center"
-  //       ),
-  //     5000
-  //   );
+  useEffect(() => {
+    const interval = setInterval(
+      () =>
+        setCenter((prevState) =>
+          prevState == "center"
+            ? "left"
+            : prevState == "left"
+            ? "right"
+            : "center"
+        ),
+      4000
+    );
 
-  //   return () => {
-  //     clearInterval(id);
-  //   };
-  // }, []);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
   const variants = {
     center: {
       x: 0,
       scale: 1.3,
       zIndex: "5",
       filter: "brightness(100%)",
-      // boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
         duration: 1,
@@ -269,7 +253,6 @@ const LargeScreen = () => {
       scale: 1.1,
       zIndex: "3",
       filter: "brightness(40%)",
-      // boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
         duration: 1,
@@ -280,7 +263,6 @@ const LargeScreen = () => {
       scale: 1.1,
       zIndex: "3",
       filter: "brightness(40%)",
-      // boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
         duration: 1,
@@ -291,7 +273,6 @@ const LargeScreen = () => {
       filter: "brightness(40%)",
       scale: 1.1,
       zIndex: "4",
-      // boxShadow: "unset",
       transition: {
         type: "spring",
         duration: 1,
@@ -302,7 +283,6 @@ const LargeScreen = () => {
       scale: 1.3,
       zIndex: "5",
       filter: "brightness(100%)",
-      // boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
         duration: 1,
@@ -312,7 +292,6 @@ const LargeScreen = () => {
       x: "200%",
       filter: "brightness(40%)",
       scale: 1.1,
-      // boxShadow: "unset",
       zIndex: "3",
       transition: {
         type: "spring",
@@ -323,7 +302,6 @@ const LargeScreen = () => {
       x: "-2%",
       filter: "brightness(40%)",
       scale: 1.1,
-      // boxShadow: "unset",
       zIndex: "3",
       transition: {
         type: "spring",
@@ -335,7 +313,6 @@ const LargeScreen = () => {
       scale: 1.3,
       zIndex: "5",
       filter: "brightness(100%)",
-      // boxShadow: "0px 0px 30px 0px rgba(0,0,0,0.3)",
       transition: {
         type: "spring",
         duration: 1,
@@ -345,7 +322,6 @@ const LargeScreen = () => {
       x: "-200%",
       filter: "brightness(40%)",
       scale: 1.1,
-      // boxShadow: "unset",
       zIndex: "3",
       transition: {
         type: "spring",
@@ -361,21 +337,11 @@ const LargeScreen = () => {
           className="flex md:space-x-2 lg:space-x-4 w-1/2 max-w-lg justify-center"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
+          when="beforeChildren"
           viewport={{ once: true }}
           transition={{ duration: 2 }}
         >
-          <div
-            className="flex items-center justify-center min-w-0"
-            onClick={() =>
-              setCenter((prevState) =>
-                prevState == "center"
-                  ? "left"
-                  : prevState == "left"
-                  ? "right"
-                  : "center"
-              )
-            }
-          >
+          <div className="flex items-center justify-center min-w-0">
             <motion.div
               initial="left"
               animate={
@@ -390,7 +356,9 @@ const LargeScreen = () => {
             >
               <Image
                 src={DreamLeague1}
-                alt="Kitchen Display System"
+                alt="Dream League - Before Choosing Players"
+                loading="lazy"
+                placeholder="blur"
                 className="rounded-2xl"
               />
             </motion.div>
@@ -408,7 +376,9 @@ const LargeScreen = () => {
             >
               <Image
                 src={DreamLeague2}
-                alt="Kitchen Display System"
+                alt="Dream League - After Choosing Players"
+                loading="lazy"
+                placeholder="blur"
                 className="rounded-2xl"
               />
             </motion.div>
@@ -426,7 +396,9 @@ const LargeScreen = () => {
             >
               <Image
                 src={Livescore}
-                alt="Kitchen Display System"
+                alt="Livescore Screen"
+                loading="lazy"
+                placeholder="blur"
                 className="rounded-2xl"
               />
             </motion.div>

@@ -1,5 +1,5 @@
 import { ImHeart } from "react-icons/im";
-import { FiGithub, FiTwitter, FiInstagram, FiMail } from "react-icons/fi";
+import { FiGithub, FiTwitter, FiInstagram, FiLinkedin } from "react-icons/fi";
 
 export default function Footer() {
   return (
@@ -7,23 +7,23 @@ export default function Footer() {
       <div>
         <ul className="flex items-center space-x-5">
           <li>
-            <a href="https://github.com/Dev-BhoneAK" aria-label="Mail">
-              <FiMail className="cursor-pointer text-xl text-pink-600" />
-            </a>
-          </li>
-          <li>
             <a href="https://github.com/Dev-BhoneAK" aria-label="Github">
-              <FiGithub className="cursor-pointer text-xl text-pink-600" />
+              <FiGithub className="cursor-pointer text-xl text-pink-600 hover:rotate-12" />
             </a>
           </li>
           <li>
             <a href="https://github.com/Dev-BhoneAK" aria-label="Twitter">
-              <FiTwitter className="cursor-pointer text-xl text-pink-600" />
+              <FiTwitter className="cursor-pointer text-xl text-pink-600 hover:-rotate-12" />
             </a>
           </li>
           <li>
             <a href="https://github.com/Dev-BhoneAK" aria-label="Instagram">
-              <FiInstagram className="cursor-pointer text-xl text-pink-600" />
+              <FiInstagram className="cursor-pointer text-xl text-pink-600 hover:text-2xl" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Dev-BhoneAK" aria-label="Mail">
+              <FiLinkedin className="cursor-pointer text-xl text-pink-600 hover:-translate-y-1" />
             </a>
           </li>
         </ul>

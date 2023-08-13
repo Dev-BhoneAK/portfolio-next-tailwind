@@ -71,7 +71,6 @@ export default function PortfolioCard({
   };
 
   return (
-    // <div className="flex items-center justify-center md:col-span-2">
     <motion.div
       className={`relative ${widthFlag ? "w-full md:w-1/3" : "w-full h-96"}`}
       initial="hidden"
@@ -87,7 +86,7 @@ export default function PortfolioCard({
           alt={title}
           src={image}
           className="rounded-3xl w-full h-full"
-          priority={true}
+          priority={widthFlag && true}
         />
       </motion.div>
       <motion.div
@@ -100,7 +99,7 @@ export default function PortfolioCard({
         className="absolute top-6 left-6  text-2xl text-white cursor-pointer md:top-8 md:left-8 "
         variants={iconVariants}
         {...transitions}
-        //   viewport={{ once: true }}
+        viewport={{ once: true }}
       >
         <FiExternalLink />
       </motion.div>
@@ -108,13 +107,13 @@ export default function PortfolioCard({
         className="absolute top-6 right-6  text-2xl text-white cursor-pointer md:top-8 md:right-8"
         variants={iconVariants}
         {...transitions}
-        //   viewport={{ once: true }}
+        viewport={{ once: true }}
       >
         <FiGithub />
       </motion.div>
       <motion.div
         className="absolute bottom-6 left-6 text-white text-left md:bottom-10 md:left-8"
-        //   viewport={{ once: true }}
+        viewport={{ once: true }}
         variants={textVariants}
         {...transitions}
       >
@@ -129,6 +128,5 @@ export default function PortfolioCard({
         </p>
       </motion.div>
     </motion.div>
-    // </div>
   );
 }

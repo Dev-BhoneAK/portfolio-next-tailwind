@@ -24,7 +24,13 @@ const SmallScreen = () => {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <Image src={Tay} alt="Tay Project" className="mb-4" />
+        <Image
+          src={Tay}
+          alt="Tay Project"
+          loading="lazy"
+          placeholder="blur"
+          className="mb-4"
+        />
         <h4 className="text-xl text-left text-slate-200 font-semibold mb-2">
           Fullstack Developer - MML
         </h4>
@@ -78,7 +84,13 @@ const LargeScreen = () => {
           transition={{ duration: 2 }}
         >
           <div className="h-3 min-w-[0.75rem] rounded-full bg-pink-600 mt-8"></div>
-          <Image src={Tay} alt="Tay Project" className="min-w-0" />
+          <Image
+            src={Tay}
+            alt="Tay Project"
+            loading="lazy"
+            placeholder="blur"
+            className="min-w-0"
+          />
         </motion.div>
       </div>
     </div>
