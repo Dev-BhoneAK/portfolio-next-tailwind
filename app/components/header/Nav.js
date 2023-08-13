@@ -10,22 +10,22 @@ export default function Nav({ theme, setTheme }) {
   const lightVariants = {
     hidden: {
       opacity: 0,
-      y: 10,
+      y: -10,
     },
     visible: {
       opacity: 1,
       y: 0,
-      color: "#37bcf8",
+      color: "#fff",
       transition: {
-        duration: 0.5,
+        duration: 1,
       },
     },
     exit: {
       opacity: 0,
-      y: 10,
+      y: -10,
       color: "#0b1a2e",
       transition: {
-        duration: 0.5,
+        duration: 1,
       },
     },
   };
@@ -33,7 +33,7 @@ export default function Nav({ theme, setTheme }) {
   const darkVariants = {
     hidden: {
       opacity: 0,
-      y: -10,
+      y: 10,
     },
     visible: {
       opacity: 1,
@@ -45,8 +45,8 @@ export default function Nav({ theme, setTheme }) {
     },
     exit: {
       opacity: 0,
-      y: -10,
-      color: "#37bcf8",
+      y: 10,
+      color: "#fff",
       transition: {
         duration: 1,
       },
@@ -138,7 +138,7 @@ export default function Nav({ theme, setTheme }) {
         />
       </motion.svg>
       <motion.div
-        className="flex items-center justify-center cursor-pointer bg-blue-950 rounded-full p-2 dark:bg-sky-400"
+        className="flex items-center justify-center cursor-pointer bg-[#0a1a2f] rounded-full p-2 dark:bg-sky-400"
         variants={themeVariants}
         initial="hidden"
         animate="visible"
@@ -152,8 +152,8 @@ export default function Nav({ theme, setTheme }) {
               exit="exit"
               variants={darkVariants}
             >
-              <BsFillMoonStarsFill
-                className="text-baseline"
+              <BsSunFill
+                className="text-xl"
                 onClick={() => setTheme("light")}
               />
             </motion.div>
@@ -165,8 +165,8 @@ export default function Nav({ theme, setTheme }) {
               exit="exit"
               variants={lightVariants}
             >
-              <BsSunFill
-                className="text-baseline"
+              <BsFillMoonStarsFill
+                className="text-xl"
                 onClick={() => setTheme("dark")}
               />
             </motion.div>

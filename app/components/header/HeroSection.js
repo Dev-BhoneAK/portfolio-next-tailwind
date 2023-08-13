@@ -19,11 +19,16 @@ export default function HeroSection() {
   };
   return (
     <section className="flex items-center justify-center my-auto">
-      <div className="text-center space-y-6">
-        <motion.div initial="hidden" animate="visible" variants={heroVariants}>
-          <h4 className="text-lg tracking-widest">HELLO</h4>
+      <div className="text-center space-y-8">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={heroVariants}
+          className="space-y-8"
+        >
+          <h4 className="text-base md:text-lg tracking-widest">HELLO</h4>
           <div>
-            <h1 className="text-4xl mb-2">
+            <h1 className="text-4xl mb-1">
               I'm Bhone Aung Kyaw,{" "}
               <span className="text-pink-600">Full-stack Developer.</span>
             </h1>
@@ -31,8 +36,8 @@ export default function HeroSection() {
               From Yangon, Myanmar
             </h1>
           </div>
-          <h4 className="text-base md:text-lg uppercase tracking-normal sm:tracking-wide md:tracking-wider">
-            I make great things using react and Node
+          <h4 className="text-lg md:text-xl uppercase tracking-wide md:tracking-wider">
+            I craft web stuff using React and Node
           </h4>
         </motion.div>
         <ActionButton />

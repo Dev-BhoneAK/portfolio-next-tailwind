@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`container mx-auto bg-white dark:bg-[#0a1a2f] text-blue-950 dark:text-sky-400 ${leagueSpartan.className}`}
+        className={`container mx-auto bg-white dark:bg-[#0a1a2f] text-[#0a1a2f] dark:text-sky-400 ${leagueSpartan.className}`}
       >
         <Providers>{children}</Providers>
         {/* {children} */}
