@@ -132,7 +132,7 @@ const SmallScreen = () => {
       <div className="h-3 w-3 rounded-full bg-pink-600 self-center mb-1"></div>
       <div className="h-8 border-l-6 border-dotted self-center border-sky-700"></div>
       <motion.div
-        className="bg-[#112240] p-4 rounded-md shadow-md"
+        className="bg-[#112240] p-4 rounded-md shadow-md self-center max-w-xl"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         when="beforeChildren"
@@ -334,7 +334,7 @@ const LargeScreen = () => {
       <h3 className="text-2xl text-center mb-2">2022</h3>
       <div className="flex justify-center space-x-6">
         <motion.div
-          className="flex md:space-x-2 lg:space-x-4 w-1/2 max-w-lg justify-center"
+          className="flex md:space-x-2 lg:space-x-4 w-1/2 max-w-xl justify-center"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           when="beforeChildren"
@@ -409,7 +409,7 @@ const LargeScreen = () => {
         <div className="h-auto border-l-6 border-dotted border-sky-700"></div>
 
         <motion.div
-          className="flex space-x-3 w-1/2 max-w-lg self-center"
+          className="flex space-x-3 w-1/2 max-w-xl self-center"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
