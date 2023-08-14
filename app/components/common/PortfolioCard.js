@@ -72,7 +72,9 @@ export default function PortfolioCard({
 
   return (
     <motion.div
-      className={`relative ${!widthFlag && "w-full h-96 max-w-xl"}`}
+      className={`relative ${
+        !widthFlag && "w-full h-80 sm:h-96 md:h-80 lg:h-96 max-w-xl"
+      }`}
       initial="hidden"
       {...attributes}
       animate="hidden"
