@@ -72,7 +72,7 @@ export default function PortfolioCard({
 
   return (
     <motion.div
-      className={`relative ${widthFlag ? "w-full md:w-1/3" : "w-full h-96"}`}
+      className={`relative ${!widthFlag && "w-full h-96 max-w-xl"}`}
       initial="hidden"
       {...attributes}
       animate="hidden"
@@ -96,7 +96,7 @@ export default function PortfolioCard({
       ></motion.div>
 
       <motion.div
-        className="absolute top-6 left-6  text-2xl text-white cursor-pointer md:top-8 md:left-8 "
+        className="absolute top-6 left-6  text-2xl text-white cursor-pointer md:top-8 md:left-8"
         variants={iconVariants}
         {...transitions}
         viewport={{ once: true }}
