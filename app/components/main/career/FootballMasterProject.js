@@ -421,12 +421,19 @@ const LargeScreen = () => {
               Senior Fullstack Developer - Myanmar Media Linkage
             </h4>
             <p className="text-slate-400 text-base">
-              Deliver high-quality, robust production code for a diverse array
-              of projects for clients including SEA Games Equestrian 2013 in
-              Myanmar, Shwedagon Pagoda Website is one of the donation of CE
-              Technology among others. Actively particpated in drawing web
-              design and software. Kitchen Display System is one of the projects
-              that I particpated in.
+              During my tenure at my initial company, I served as a Junior Web
+              Designer & Developer, where I actively contributed to various
+              projects and initiatives. A primary focus of my role was crafting
+              frontend solutions, mainly through the creation of HTML and CSS
+              codebases. One of the standout projects during my time there was
+              the "Shwedagon Pagoda Project," where I played a significant role
+              in its development. I assisted in the design efforts,
+              collaborating closely with the team to refine the project's visual
+              elements and user experience. Additionally, I engaged as a junior
+              developer in the 2013 SEA Games Equestrian event, contributing to
+              the development of the event's point system using C#. This
+              experience allowed me to hone my skills and gain valuable insights
+              into software development processes in a dynamic environment.
             </p>
           </div>
         </motion.div>
