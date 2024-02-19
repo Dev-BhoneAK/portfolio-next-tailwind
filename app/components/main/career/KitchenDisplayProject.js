@@ -85,12 +85,15 @@ const LargeScreen = () => {
               Web Developer - Novitee
             </h4>
             <p className="text-slate-400 text-lg">
-              Deliver high-quality, robust production code for a diverse array
-              of projects for clients including SEA Games Equestrian 2013 in
-              Myanmar, Shwedagon Pagoda Website is one of the donation of CE
-              Technology among others. Actively particpated in drawing web
-              design and software. Kitchen Display System is one of the projects
-              that I particpated in.
+              During my time at my second company, I held the position of Web
+              Developer, where my primary responsibility was developing backend
+              solutions using Laravel 4. Additionally, I utilized Bootstrap and
+              jQuery to develop responsive and interactive frontend interfaces.
+              My role involved delivering high-quality, robust production code
+              for a diverse range of projects to meet the specific needs and
+              requirements of our clients. Notable among these were the
+              Purchasing and Inventory System, Hotel Booking System, and Kitchen
+              Display System, for which you can see a visual representation.
             </p>
           </div>
         </motion.div>
