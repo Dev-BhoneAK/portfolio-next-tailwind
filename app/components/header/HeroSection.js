@@ -1,5 +1,8 @@
 import ActionButton from "../common/ActionButton";
 import { motion, AnimatePresence } from "framer-motion";
+import { Spectral } from "next/font/google";
+
+const spectral = Spectral({ weight: "300", subsets: ["latin"] });
 
 export default function HeroSection() {
   const heroVariants = {
@@ -26,19 +29,21 @@ export default function HeroSection() {
           variants={heroVariants}
           className="space-y-8"
         >
-          <h4 className="text-base md:text-lg tracking-widest">HELLO</h4>
+          <p className="text-base md:text-lg tracking-widest">HELLO</p>
           <div>
             <h1 className="text-4xl mb-1">
               I&apos;m Bhone Aung Kyaw,{" "}
-              <span className="text-pink-600">Full-stack Developer.</span>
+              <span className={`text-pink-600 ${spectral.className}`}>
+                Full-stack Developer
+              </span>
             </h1>
-            <h1 className="text-3xl md:text-4xl opacity-50">
+            <h2 className="text-2xl md:text-3xl opacity-50">
               From Yangon, Myanmar
-            </h1>
+            </h2>
           </div>
-          <h4 className="text-lg md:text-xl uppercase tracking-normal md:tracking-wider">
+          <p className="text-lg md:text-xl uppercase tracking-normal md:tracking-wider">
             I craft web stuff using React and Node
-          </h4>
+          </p>
         </motion.div>
         <ActionButton />
       </div>
