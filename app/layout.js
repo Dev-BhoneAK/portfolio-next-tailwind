@@ -5,8 +5,9 @@ import Providers from "@/app/components/Providers";
 const leagueSpartan = League_Spartan({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Hello",
-  description: "My portfolio implemented using Next.js and Tailwind",
+  title: "Bhone Aung Kyaw",
+  description:
+    "Bhone Aung Kyaw is an experienced Full-stack Developer with over eight years of experience in building web-related projects.",
   icons: {
     icon: "/favicon.ico",
     apple: "/favicon.ico",
