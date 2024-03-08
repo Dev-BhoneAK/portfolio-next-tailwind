@@ -14,24 +14,24 @@ export default function FootballMasterProject() {
 
 const SmallScreen = () => {
   const [isCenter, setCenter] = useState("center");
+  const [isHover, setHover] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(
-      () =>
+    const interval = setInterval(() => {
+      !isHover &&
         setCenter((prevState) =>
           prevState == "center"
             ? "left"
             : prevState == "left"
             ? "right"
             : "center"
-        ),
-      4000
-    );
+        );
+    }, 4000);
 
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [isHover]);
 
   const variants = {
     center: {
@@ -128,7 +128,7 @@ const SmallScreen = () => {
   return (
     <div className="flex flex-col justify-center">
       {" "}
-      <h3 className="text-2xl text-center mb-2">2022</h3>
+      <h3 className="text-2xl text-center mb-2">2021</h3>
       <div className="h-3 w-3 rounded-full bg-pink-600 self-center mb-1"></div>
       <div className="h-8 border-l-6 border-dotted self-center border-sky-700"></div>
       <motion.div
@@ -138,6 +138,8 @@ const SmallScreen = () => {
         when="beforeChildren"
         viewport={{ once: true }}
         transition={{ duration: 1 }}
+        onTouchStart={() => setHover(true)}
+        onTouchEnd={() => setHover(false)}
       >
         <div className="flex items-center justify-center mt-8 mb-14 xs:mt-16 xs:mb-20">
           <motion.div
@@ -219,24 +221,24 @@ const SmallScreen = () => {
 
 const LargeScreen = () => {
   const [isCenter, setCenter] = useState("center");
+  const [isHover, setHover] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(
-      () =>
+    const interval = setInterval(() => {
+      !isHover &&
         setCenter((prevState) =>
           prevState == "center"
             ? "left"
             : prevState == "left"
             ? "right"
             : "center"
-        ),
-      4000
-    );
+        );
+    }, 4000);
 
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [isHover]);
   const variants = {
     center: {
       x: 0,
@@ -331,7 +333,7 @@ const LargeScreen = () => {
   };
   return (
     <div className="flex flex-col justify-center">
-      <h3 className="text-2xl text-center mb-2">2022</h3>
+      <h3 className="text-2xl text-center mb-2">2021</h3>
       <div className="flex justify-center space-x-6">
         <motion.div
           className="flex md:space-x-2 lg:space-x-4 w-1/2 max-w-xl justify-center"
@@ -340,6 +342,8 @@ const LargeScreen = () => {
           when="beforeChildren"
           viewport={{ once: true }}
           transition={{ duration: 2 }}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
         >
           <div className="flex items-center justify-center min-w-0">
             <motion.div
@@ -426,14 +430,10 @@ const LargeScreen = () => {
               projects and initiatives. A primary focus of my role was crafting
               frontend solutions, mainly through the creation of HTML and CSS
               codebases. One of the standout projects during my time there was
-              the "Shwedagon Pagoda Project," where I played a significant role
-              in its development. I assisted in the design efforts,
-              collaborating closely with the team to refine the project's visual
-              elements and user experience. Additionally, I engaged as a junior
-              developer in the 2013 SEA Games Equestrian event, contributing to
-              the development of the event's point system using C#. This
-              experience allowed me to hone my skills and gain valuable insights
-              into software development processes in a dynamic environment.
+              the &quot;Shwedagon Pagoda Project&quot;, where I played a
+              significant role in its development. I assisted in the design
+              efforts, collaborating closely with the team to refine the
+              project.
             </p>
           </div>
         </motion.div>
