@@ -85,7 +85,7 @@ export default function ActionButton() {
         >
           <a
             href="mailto:bhoneak@outlook.com"
-            className="bg-pink-600 text-white uppercase font-semibold tracking-wider w-full h-full inline-block rounded-full px-6 pt-2"
+            className="bg-pink-600 text-white uppercase font-semibold tracking-wider w-full h-full inline-block rounded-full px-5 pt-2"
           >
             Get In Touch
           </a>
