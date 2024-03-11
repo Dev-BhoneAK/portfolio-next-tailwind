@@ -1,6 +1,6 @@
 import ShwedagonPagoda from "../../public/career/shwedagon/shwedagon.png";
 import KitchenDisplay from "../../public/career/kitchen-display/kitchen-display.png";
-
+import Tay from "../../public/career/tay/tay.png";
 export const SeaNetTechData = {
   year: "2013",
   position: "Web Designer - SeaNet Technology",
@@ -55,10 +55,10 @@ export const MMLFullStackData = {
       address: "http://52.77.69.3/",
     },
   ],
-  imageSrc: KitchenDisplay,
-  imageAlt: "Kitchen Display Project",
+  imageSrc: Tay,
+  imageAlt: "Tay Project",
   responsibility:
-    "I began as a fullstack developer at Myanmar Media Linkage, focusing on backend services using Laravel and NodeJS. This involved creating internal services like payment gateways and video transcoding service for products such as Click. Additionally, I maintained and enhanced lotayamm.com, a key product of Myanmar's leading telecom provider, MPT.",
+    "I began as a fullstack developer at Myanmar Media Linkage, focusing on backend services using Laravel and NodeJS. This involved design and development for agriculture app, ThuTaMyay and enhancing video transcoding service for products such as 'Click' and 'Tay+'. Additionally, I maintained and enhanced 'Lo Ta Ya Web Portal', a key product of Myanmar's leading telecom provider, MPT.",
 };
 
 export const MMLTeamLeadData = {
@@ -74,5 +74,5 @@ export const MMLTeamLeadData = {
   imageSrc: KitchenDisplay,
   imageAlt: "Kitchen Display Project",
   responsibility:
-    "At Novitee, I held the position of Web Developer, where my primary responsibility was developing backend solutions using Laravel 4. Additionally, I utilized Bootstrap and jQuery to develop responsive and interactive frontend interfaces. I delivered high-quality code for projects like Purchasing and Inventory System, Hotel Booking System, and Kitchen Display System, for which you can see a visual representation.",
+    "Promoted from Full-stack Developer to Senior Team Lead, leading a team of developers across different products. the development of internal services like payment consent gateways for integration with third-party websites",
 };
