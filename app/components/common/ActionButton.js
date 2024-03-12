@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
 
 export default function ActionButton() {
   const pathVariants = {
@@ -84,10 +85,12 @@ export default function ActionButton() {
           height="40"
         >
           <a
-            href="mailto:bhoneak@outlook.com"
+            href="/Resume.pdf"
             className="bg-pink-600 text-white uppercase font-semibold tracking-wider w-full h-full inline-block rounded-full px-5 pt-2"
+            download="BHONE AUNG KYAW - Resume"
           >
-            Get In Touch
+            {/* <FiDownload className="cursor-pointer text-xl hover:text-2xl" /> */}
+            Get Resume
           </a>
         </foreignObject>
       </motion.svg>
