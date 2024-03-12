@@ -1,7 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { FiExternalLink } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { FiExternalLink, FiLink } from "react-icons/fi";
+
+import ProjectLink from "./ProjectLink";
 
 export function SmallCareerCard({
   imageSrc,
@@ -32,7 +34,9 @@ export function SmallCareerCard({
   );
 }
 
-export function LargeCareerCard({ data: { position, responsibility } }) {
+export function LargeCareerCard({
+  data: { position, responsibility, projectLinks },
+}) {
   return (
     <motion.div
       className="flex space-x-3 w-1/2 max-w-xl self-center"
@@ -51,6 +55,7 @@ export function LargeCareerCard({ data: { position, responsibility } }) {
         <p className="text-slate-400 dark:text-slate-400 text-lg">
           {responsibility}
         </p>
+        <ProjectLink projectLinks={projectLinks} />
       </div>
 
       <div className="h-3 min-w-[0.75rem] rounded-full bg-pink-600 mt-8"></div>
