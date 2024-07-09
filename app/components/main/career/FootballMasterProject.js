@@ -206,7 +206,7 @@ const SmallScreen = () => {
           Senior Fullstack Developer - MML
         </h4>
         <p className="text-slate-400 text-base">
-        Promoted from Full-stack Developer to Senior Team Lead, I led a team of developers across various products. I collaborated with a cloud engineer to migrate projects from a local data center to AWS, reducing the company's monthly costs. I communicated daily with engineers, designers, clients, and stakeholders. Additionally, I architected, designed, tested, and documented the admin dashboard and REST APIs for the nation’s first-ever Fantasy Football App using Node.js
+        Promoted from Full-stack Developer to Senior Team Lead, I led a team of developers across various products. I collaborated with a cloud engineer to migrate projects from a local data center to AWS, reducing monthly cost of the company. I communicated daily with engineers, designers, clients, and stakeholders. Additionally, I architected, designed, tested, and documented the admin dashboard and REST APIs for the nation’s first-ever Fantasy Football App using Node.js
         </p>
       </motion.div>
       <div className="h-8 border-l-6 border-dotted self-center border-sky-700"></div>
@@ -422,7 +422,7 @@ const LargeScreen = () => {
             </h4>
             </div>
             <p className="text-slate-400 text-base">
-            Promoted from Full-stack Developer to Senior Team Lead, I led a team of developers across various products. I collaborated with a cloud engineer to migrate projects from a local data center to AWS, reducing the company's monthly costs. I communicated daily with engineers, designers, clients, and stakeholders. Additionally, I architected, designed, tested, and documented the admin dashboard and REST APIs for the nation’s first-ever Fantasy Football App using Node.js
+            Promoted from Full-stack Developer to Senior Team Lead, I led a team of developers across various products. I collaborated with a cloud engineer to migrate projects from a local data center to AWS, reducing monthly cost of the company. I communicated daily with engineers, designers, clients, and stakeholders. Additionally, I architected, designed, tested, and documented the admin dashboard and REST APIs for the nation’s first-ever Fantasy Football App using Node.js
             </p>
           </div>
         </motion.div>
