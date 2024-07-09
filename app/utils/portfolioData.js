@@ -1,7 +1,6 @@
 import EmployeePoll from "../../public/portfolio/employee-poll.png";
 import CharityProject from "../../public/portfolio/charity.gif";
 import InfotainmentProject from "../../public/portfolio/infotainment.png";
-// import TestImage from "../../public/portfolio/web3.png";
 import EcommerceClient from "../../public/portfolio/ecommerce-client.gif";
 import EcommerceAdmin from "../../public/portfolio/ecommerce-admin.png";
 

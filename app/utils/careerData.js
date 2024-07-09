@@ -1,6 +1,7 @@
 import ShwedagonPagoda from "../../public/career/shwedagon/shwedagon.png";
 import KitchenDisplay from "../../public/career/kitchen-display/kitchen-display.png";
 import Tay from "../../public/career/tay/tay.png";
+
 export const SeaNetTechData = {
   year: "2013",
   position: "Web Designer - SeaNet Technology",
@@ -38,7 +39,7 @@ export const NoviteeData = {
   imageSrc: KitchenDisplay,
   imageAlt: "Kitchen Display Project",
   responsibility:
-    "At Novitee, I held the position of Web Developer, where my primary responsibility was developing backend solutions using Laravel 4. Additionally, I utilized Bootstrap and jQuery to develop responsive and interactive frontend interfaces. I delivered high-quality code for projects like Purchasing and Inventory System, Hotel Booking System, and Kitchen Display System, for which you can see a visual representation.",
+    "Started working as a Backend Developer at a Singapore-based F&B solutions company, where my primary responsibility was developing backend solutions. Additionally, I utilized Bootstrap and jQuery to develop responsive and interactive frontend interfaces. I delivered high-quality code for projects like Purchasing and Inventory System, Hotel Booking System, and Kitchen Display System, for which you can see a visual representation.",
 };
 
 export const MMLFullStackData = {
@@ -58,11 +59,11 @@ export const MMLFullStackData = {
   imageSrc: Tay,
   imageAlt: "Tay Project",
   responsibility:
-    "I began as a fullstack developer at Myanmar Media Linkage, focusing on backend services using Laravel and NodeJS. This involved design and development for agriculture app, ThuTaMyay and enhancing video transcoding service for products such as 'Click' and 'Tay+'. Additionally, I maintained and enhanced 'Lo Ta Ya Web Portal', a key product of Myanmar's leading telecom provider, MPT.",
+    "Developed the backend and REST API for an agriculture app in collaboration with the nation’s largest telecom company. I maintained and enhanced Lotaya, a major web portal in Myanmar, using Laravel 5.6 and Angular 2. I led the creation of Tay4U, a video social platform and contributed to video transcoding and storing videos on AWS S3 as a microservice which can be used video-related products of the company.",
 };
 
 export const MMLTeamLeadData = {
-  year: "2020",
+  year: "2022",
   position: "Senior Team Lead - Myanmar Media Linkage",
   companyWebsite: "https://mml.com.mm/",
   projectLinks: [
@@ -74,5 +75,5 @@ export const MMLTeamLeadData = {
   imageSrc: KitchenDisplay,
   imageAlt: "Kitchen Display Project",
   responsibility:
-    "Promoted from Full-stack Developer to Senior Team Lead, leading a team of developers across different products. the development of internal services like payment consent gateways for integration with third-party websites",
+    "Promoted to the role of Senior Team Lead from Full-stack Developer, where my primary responsibility is overseeing a team of developers across various projects. I lead the development of internal services, including payment consent gateways for integration with third-party websites. I engage in regular communication and collaboration with teams of engineers, designers, clients, and stakeholders. I designed and developed the REST API and Admin Dashboard for the 'Ball Sayar App', which introduces the concept of fantasy football with Europe's biggest leagues.",
 };

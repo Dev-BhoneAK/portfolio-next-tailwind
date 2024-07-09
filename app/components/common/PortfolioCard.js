@@ -103,7 +103,7 @@ export default function PortfolioCard({
         {...transitions}
         viewport={{ once: true }}
       >
-        <FiExternalLink />
+        {/* <FiExternalLink /> */}
       </motion.div>
       <motion.div
         className="absolute top-6 right-6  text-2xl text-white cursor-pointer md:top-8 md:right-8"
@@ -111,7 +111,7 @@ export default function PortfolioCard({
         {...transitions}
         viewport={{ once: true }}
       >
-        <FiGithub />
+        {/* <FiGithub /> */}
       </motion.div>
       <motion.div
         className="absolute bottom-6 left-6 text-white text-left md:bottom-10 md:left-8"
@@ -119,7 +119,9 @@ export default function PortfolioCard({
         variants={textVariants}
         {...transitions}
       >
-        <h3 className="mb-1 text-2xl">{title}</h3>
+        {/* <div className="flex items-center mb-1"> */}
+        <a href=""><h3 className="text-2xl">{title}</h3></a>
+        {/* <FiExternalLink className="cursor-pointer text-2xl hover:text-3xl" /></div> */}
         <p className="text-lg text-slate-400 mb-4 leading-tight">
           {description}
         </p>

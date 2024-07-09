@@ -16,7 +16,7 @@ function CareerImage({ data: { imageSrc, imageAlt } }) {
         src={imageSrc}
         alt={imageAlt}
         loading="lazy"
-        placeholder="blur"
+        // placeholder="blur"
         className="min-w-0"
       />
     </motion.div>

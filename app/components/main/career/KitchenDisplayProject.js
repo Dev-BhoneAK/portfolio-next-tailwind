@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { useMediaQuery } from "@/app/hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import ShwedagonPagoda from "../../../../public/career/shwedagon/shwedagon.png";
 import KitchenDisplay from "../../../../public/career/kitchen-display/kitchen-display.png";
 
 export default function KitchenDisplayProject() {
@@ -32,12 +31,11 @@ const SmallScreen = () => {
           placeholder="blur"
           className="mb-4"
         />
-        <h4 className="text-xl text-left text-slate-200 font-semibold mb-2">
+        <h4 className="text-lg text-left text-slate-200 dark:text-sky-400 font-semibold mb-2">
           Web Developer - Novitee
         </h4>
-        <p className="text-slate-400 text-lg">
-          At Novitee, I held the position of Web Developer, where my primary
-          responsibility was developing backend solutions using Laravel 4.
+        <p className="text-slate-400 text-base">
+          Started working as a Backend Developer at a Singapore-based F&B solutions company, where my primary responsibility was developing backend solutions.
           Additionally, I utilized Bootstrap and jQuery to develop responsive
           and interactive frontend interfaces. I delivered high-quality code for
           projects like Purchasing and Inventory System, Hotel Booking System,
@@ -83,12 +81,13 @@ const LargeScreen = () => {
         >
           <div className="h-3 min-w-[0.75rem] rounded-full bg-pink-600 mt-8"></div>
           <div className="bg-[#112240] p-4 rounded-md shadow-md ">
-            <h4 className="text-xl text-left text-slate-200 font-semibold mb-6">
+            <div className="flex items-center mb-6">
+            <h4 className="text-slate-200 dark:text-sky-400 text-lg text-left font-semibold mr-2">
               Web Developer - Novitee
             </h4>
-            <p className="text-slate-400 text-lg">
-              At Novitee, I held the position of Web Developer, where my primary
-              responsibility was developing backend solutions using Laravel 4.
+            </div>
+            <p className="text-slate-400 text-base">
+              Started working as a Backend Developer at a Singapore-based F&B solutions company, where my primary responsibility was developing backend solutions.
               Additionally, I utilized Bootstrap and jQuery to develop
               responsive and interactive frontend interfaces. I delivered
               high-quality code for projects like Purchasing and Inventory

@@ -12,7 +12,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://linkedin.com/in/BhoneAK" aria-label="Linkedin">
+            <a href="https://www.linkedin.com/in/dev-bhoneak" aria-label="Linkedin">
               <FiLinkedin className="cursor-pointer text-xl text-pink-600 hover:-translate-y-1" />
             </a>
           </li>
@@ -22,7 +22,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://github.com/Dev-BhoneAK" aria-label="Twitter">
+            <a href="https://x.com/bhone_ak" aria-label="Twitter">
               <FiTwitter className="cursor-pointer text-xl text-pink-600 hover:-rotate-12" />
             </a>
           </li>

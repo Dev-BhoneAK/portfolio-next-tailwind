@@ -41,7 +41,7 @@ export default function HeroSection() {
               From Yangon, Myanmar
             </h2>
           </div>
-          <p className="text-lg md:text-xl uppercase tracking-normal md:tracking-wider">
+          <p className="text-base md:text-xl uppercase tracking-tighter md:tracking-wider">
             I craft web stuff using React and Node
           </p>
         </motion.div>

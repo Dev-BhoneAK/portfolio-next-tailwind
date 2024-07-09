@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiExternalLink, FiLink } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 
 import ProjectLink from "./ProjectLink";
 
@@ -23,7 +23,7 @@ export function SmallCareerCard({
         src={imageSrc}
         alt={imageAlt}
         loading="lazy"
-        placeholder="blur"
+        // placeholder="blur"
         className="mb-4"
       />
       <h4 className="text-xl text-left text-slate-200 font-semibold mb-2">
@@ -47,15 +47,15 @@ export function LargeCareerCard({
     >
       <div className="bg-[#003459] dark:bg-[#112240] p-4 rounded-md shadow-md">
         <div className="flex items-center mb-6">
-          <h4 className="text-slate-200 dark:text-sky-400 text-xl text-left font-semibold mr-2">
+          <h4 className="text-slate-200 dark:text-sky-400 text-lg text-left font-semibold mr-2">
             {position}
           </h4>
-          <FiExternalLink className="cursor-pointer text-2xl text-pink-600 hover:text-3xl" />
+          {/* <FiExternalLink className="cursor-pointer text-2xl text-pink-600 hover:text-3xl" /> */}
         </div>
-        <p className="text-slate-400 dark:text-slate-400 text-lg">
+        <p className="text-slate-400 dark:text-slate-400 text-base">
           {responsibility}
         </p>
-        <ProjectLink projectLinks={projectLinks} />
+        {/* <ProjectLink projectLinks={projectLinks} /> */}
       </div>
 
       <div className="h-3 min-w-[0.75rem] rounded-full bg-pink-600 mt-8"></div>
