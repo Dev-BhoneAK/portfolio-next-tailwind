@@ -1,7 +1,8 @@
 export default function robots() {
-  return {
-    rules: {
-      allow: "/api/og/*",
-    },
-  };
+    return {
+        rules: {
+            userAgent: "*",
+            allow: ["/", "/api/og/*"],
+        },
+    };
 }
